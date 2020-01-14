@@ -1,6 +1,7 @@
 #
 
 # install base
+sudo apt-get update
 sudo apt-get install vim
 sudo apt-get install curl
 
@@ -15,11 +16,18 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text
 
-# install OpenJDK 
-sudo apt-get install default-jdk
-
 # install docker
 sudo apt-get install docker.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 # docker-compose --version
+
+# install OpenJDK 
+sudo apt-get install default-jdk
+
+# install Elasticsearch
+sudo apt-get install apt-transport-https
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+add-apt-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
+sudo apt-get update
+sudo apt-get install elasticsearch
