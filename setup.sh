@@ -4,6 +4,7 @@
 sudo apt-get update
 sudo apt-get install vim
 sudo apt-get install curl
+sudo apt-get install net-tools
 
 # install nvm
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
@@ -31,3 +32,12 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add
 add-apt-repository "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
 sudo apt-get update
 sudo apt-get install elasticsearch
+
+# install x2go
+sudo apt-add-repository -y ppa:x2go/stable
+sudo apt-get update
+sudo apt-get install x2goserver x2goserver-xsession
+
+# install xfce4
+sudo apt-get install xfce4
+
